@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <!-- Proper charset, and adaptable viewport -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap Integration for pretty stuff -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+        <!-- Reference to the stylesheet -->
+        <link href="styles.css" rel="stylesheet">
+
+        <link rel="preload" as="image" href="frames/BG_480x360.png" fetchpriority="high">
+        <link rel="preload" as="image" href="frames/Title_Name_v2_1.png" fetchpriority="high">
+
+        <!-- Title for tab -->
+        <title>Lore - Space Craze</title>
+    </head>
+
+    <body>
+        <div class="page">
+            <header>
+                <a href="index.html">
+                    <img
+                        id="title-animation"
+                        src="frames/Title_Name_v2_1.png"
+                        alt="Space Craze"
+                        style="image-rendering: pixelated;"
+                    />
+                </a>
+
+                <nav class="site-nav">
+                    <a class="btn btn-warning mx-2" href="index.html">Play</a>
+                    <a class="btn btn-warning mx-2" href="gallery.html">Gallery</a>
+                    <a class="btn btn-warning mx-2" href="audio.html">Audio</a>
+                    <a class="btn btn-warning mx-2" href="lore.html" aria-current="page">Lore</a>
+                </nav>
+            </header>
+
+            <div id="loading-text">Loading...</div>
+
+            <main>
+                <div id="main-loader"></div>
+
+                <section class="lore-panel">
+                    <h3 class="lore-title">A Space Craze</h3>
+
+                    <p>
+                        Long after the old routes went dark, the Star Lanes awoke again — not with trade, but with fire.
+                    </p>
+
+                    <p>
+                        You are the last pilot of a forgotten defense craft, launched from the edge of a collapsing sector
+                        to confront a rising threat.
+                    </p>
+
+                    <p>
+                        The enemy comes in waves: autonomous fighters and corrupted escorts —
+                        machines that no longer remember who built them, only how to dominate.
+                    </p>
+
+                    <p>
+                        At the heart of the chaos waits the <strong>Overseer</strong> — a massive command ship gone rogue,
+                        bending lesser vessels to its will.
+                    </p>
+
+                    <p>
+                        End the machine rebellion.<br>
+                        Destroy the Overseer.
+
+                    </p>
+                </section>
+
+
+            </main>
+
+            <footer>
+                <p>© 2025 Space Craze</p>
+            </footer>
+
+            <!--Javascript-->
+            <script src="animation.js"></script>
+            <script src="main-loader.js"></script>
+        </div>
+    </body>
+

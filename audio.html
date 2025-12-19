@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <!-- Proper charset, and adaptable viewport -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap Integration for pretty stuff -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+        <!-- Reference to the stylesheet -->
+        <link href="styles.css" rel="stylesheet">
+
+        <link rel="preload" as="image" href="frames/BG_480x360.png" fetchpriority="high">
+        <link rel="preload" as="image" href="frames/Title_Name_v2_1.png" fetchpriority="high">
+
+        <!-- Title for tab -->
+        <title>Audio - Space Craze</title>
+    </head>
+
+    <body>
+        <div class="page">
+            <header>
+                <a href="index.html">
+                    <img
+                        id="title-animation"
+                        src="frames/Title_Name_v2_1.png"
+                        alt="Space Craze"
+                        style="image-rendering: pixelated;"
+                    />
+                </a>
+
+                <nav class="site-nav">
+                    <a class="btn btn-warning mx-2" href="index.html">Play</a>
+                    <a class="btn btn-warning mx-2" href="gallery.html">Gallery</a>
+                    <a class="btn btn-warning mx-2" href="audio.html" aria-current="page">Audio</a>
+                    <a class="btn btn-warning mx-2" href="lore.html">Lore</a>
+                </nav>
+            </header>
+
+            <div id="loading-text">Loading...</div>
+
+            <main>
+                <div id="main-loader"></div>
+
+                <!-- MUSIC -->
+                <section class="audio-section">
+                    <h3 class="audio-section-title">Music</h3>
+                    <div class="audio-grid">
+                        <article class="audio-card">
+
+                            <h4 class="audio-title">Drift</h4>
+
+                            <div class="audio-controls">
+                                <button class="audio-btn" data-audio="theme">Play</button>
+                                <button class="audio-btn" data-loop="theme">Loop: Off</button>
+                            </div>
+
+                            <audio id="theme" src="audio/music/space_craze_lobby_music.mp3" preload="metadata"></audio>
+
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </article>
+
+                        <article class="audio-card">
+
+                            <h4 class="audio-title">First Contact</h4>
+
+                            <div class="audio-controls">
+                                <button class="audio-btn" data-audio="alt-theme">Play</button>
+                                <button class="audio-btn" data-loop="alt-theme">Loop: Off</button>
+                            </div>
+
+                            <audio id="alt-theme" src="audio/music/space_craze_option_for_just_the_melody_.mp3" preload="metadata"></audio>
+
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </article>
+
+                        <article class="audio-card">
+
+                            <h4 class="audio-title">Rising Threat</h4>
+
+                            <div class="audio-controls">
+                                <button class="audio-btn" data-audio="level-theme">Play</button>
+                                <button class="audio-btn" data-loop="level-theme">Loop: Off</button>
+                            </div>
+
+                            <audio id="level-theme" src="audio/music/space_craze_lvl_music.mp3" preload="metadata"></audio>
+
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </article>
+
+
+                        <article class="audio-card">
+
+                            <h4 class="audio-title">The Overseer</h4>
+
+                            <div class="audio-controls">
+                                <button class="audio-btn" data-audio="boss-theme">Play</button>
+                                <button class="audio-btn" data-loop="boss-theme">Loop: Off</button>
+                            </div>
+
+                            <audio id="boss-theme" src="audio/music/Space_craze_boss_music.mp3" preload="metadata"></audio>
+
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </article>
+
+
+
+
+                    </div>
+                </section>
+                <!-- SFX -->
+                <section class="audio-section">
+                    <h3 class="audio-section-title">Sound Effects</h3>
+                    <div class="audio-grid">
+                        <article class="audio-card">
+
+                            <h4 class="audio-title">Boost</h4>
+
+                            <div class="audio-controls">
+                                <button class="audio-btn" data-audio="boost">Play</button>
+                            </div>
+
+                            <audio id="boost" src="audio/sfx/Boost.wav" preload="metadata"></audio>
+
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </article>
+
+                        <article class="audio-card">
+
+                            <h4 class="audio-title">Player Hit</h4>
+
+                            <div class="audio-controls">
+                                <button class="audio-btn" data-audio="hit">Play</button>
+                            </div>
+
+                            <audio id="hit" src="audio/sfx/Hit 1.mp3" preload="metadata"></audio>
+
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </article>
+
+                        <article class="audio-card">
+
+                            <h4 class="audio-title">Primary Fire</h4>
+
+                            <div class="audio-controls">
+                                <button class="audio-btn" data-audio="primary-fire">Play</button>
+                            </div>
+
+                            <audio id="primary-fire" src="audio/sfx/Fire 3.mp3" preload="metadata"></audio>
+
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </article>
+
+                        <article class="audio-card">
+
+                            <h4 class="audio-title">Secondary Fire</h4>
+
+                            <div class="audio-controls">
+                                <button class="audio-btn" data-audio="secondary-fire">Play</button>
+                            </div>
+
+                            <audio id="secondary-fire" src="audio/sfx/Fire 5.mp3" preload="metadata"></audio>
+
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+            </main>
+
+            <footer>
+                <p>© 2025 Space Craze</p>
+            </footer>
+
+            <!--Javascript-->
+            <script src="animation.js"></script>
+            <script src="main-loader.js"></script>
+            <script src="audio-player.js"></script>
+        </div>
+    </body>
+
