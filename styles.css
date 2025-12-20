@@ -1,3 +1,7 @@
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
 body { margin: 0; }
 
 body {
@@ -12,6 +16,7 @@ body {
   font-family: "Press Start 2P";
   color: orange;
 }
+
 
 main {
   opacity: 0;
@@ -28,7 +33,10 @@ main.is-ready {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding: 0rem 1rem 0;
 }
+
+.page{ outline: 2px solid cyan; } /*debugging*/
 
 header {
   text-align: center;
@@ -90,7 +98,6 @@ footer {
 .navbar {
   display: flex;
   justify-content: center;
-  gap: 1rem;
 }
 
 .site-nav a {
@@ -130,16 +137,17 @@ footer {
 }
 
 /* Mobile override */
-@media (max-width: 600px) {
+@media (max-width: 950px) {
   .site-nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+    max-width: 520px;
+    margin: 0 auto;
   }
 
   .site-nav a {
-    width: 100%;
-    max-width: 220px;
+    max-width: none;
     padding: 12px 0;
     text-align: center;
   }
@@ -148,7 +156,11 @@ footer {
 /* Center the whole thing */
 .game-center {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-width: 485px;
+  width: 100%;
+  margin: 0 auto;
   padding: 0 1rem; /* breathing room on mobile */
 }
 
@@ -156,7 +168,6 @@ footer {
 .scratch-frame {
 
   width: 100%;
-  max-width: 485px;            /* desktop cap */
   aspect-ratio: 485 / 402;    /* Scratch ratio */
 
   padding: 6px;
@@ -231,7 +242,6 @@ footer {
   background-color: black;
 
   padding: 6px;
-  max-width: 485px;
   min-height: 56px;
 }
 
@@ -243,7 +253,7 @@ footer {
 
 .instructions-title {
   font-family: "Press Start 2P";
-  font-size: 26px;
+  font-size: 22px;
   color: orange;
   text-align: center;
   margin: 0 0 0.75rem 0;
@@ -421,7 +431,7 @@ footer {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 660px) {
   .audio-grid {
     grid-template-columns: 1fr;
   }
@@ -467,7 +477,7 @@ footer {
   display: flex;
   justify-content: center;
   gap: 0.75rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .audio-btn {
@@ -509,8 +519,14 @@ footer {
 /* LORE */
 
 .lore-panel {
+  width: 100%;
   max-width: 720px;
-  margin: 0rem auto;
+  margin-left: auto;
+  margin-right: auto;
+
+  outline: 4px solid #D83274;
+
+
   padding: 20px 24px;
 
   background: black;
