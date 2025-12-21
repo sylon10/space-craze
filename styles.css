@@ -76,7 +76,7 @@ footer {
   height: auto;
   aspect-ratio: 485 / 240;
   image-rendering: pixelated;
-  image-rendering: crisp edges;
+  image-rendering: crisp-edges;
 }
 
 /* Kill Bootstrap active/focus styles for nav buttons */
