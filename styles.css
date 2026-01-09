@@ -392,6 +392,7 @@ footer {
 
   width: auto;
   height: auto;
+  object-fit: contain;
 
   image-rendering: pixelated;
 }
